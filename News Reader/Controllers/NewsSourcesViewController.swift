@@ -9,6 +9,12 @@ class NewsSourcesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Test
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+            let modalVC = CustomModalViewController()
+            self.present(modalVC, animated: true, completion: nil)
+        })
+        
         tableView.delegate = self
         tableView.dataSource = self
         
